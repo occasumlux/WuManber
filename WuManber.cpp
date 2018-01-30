@@ -1,4 +1,4 @@
-#include "WuManber.h"
+#include "WuManber.hpp"
 #include <iostream>
 
 WuManber::WuManber():
@@ -95,8 +95,9 @@ std::list<Occurrence> WuManber::search(const std::string& text, const std::size_
 						pattern_iter != possibles.end();
 						++pattern_iter) {
 						std::string pattern = patterns[*pattern_iter];
-						//std::cout << pattern << std::endl;
-						std::size_t char_pos = char_index - B - 1;
+						//std::cout << "Pattern: " << pattern << std::endl;
+						std::size_t char_pos = char_index - m + B;
+                        //std::cout << "Char pos: " << char_pos << std::endl;
 						std::size_t i;
 						//std::cout << "Step 3!\n";
 						for (i = 0; i < pattern.length(); ++i) {
