@@ -52,8 +52,6 @@ int main() {
         //Print occurences data
         for (auto& res : r) {
             std::cout << res.index << " " << res.pattern << " " << res.line << std::endl;
-            if (res.pattern == "nmap XMAS")
-                ++xmasCounter;
             counters[res.pattern]++;
         }
         
